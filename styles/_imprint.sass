@@ -1,0 +1,47 @@
+#imprint    
+    .imprint-content
+        width: 60vw
+        margin: 96px auto 0 auto
+        .navigate-back
+            position: fixed
+            background: $Snow
+            left: 80px
+            top: 162px
+            border-radius: 4px
+            display: flex
+            justify-content: center
+            align-content: center
+            filter: drop-shadow(0px 4px 8px rgba(161, 153, 255, 0.2))
+            z-index: 100
+            opacity: 60%
+
+            svg
+                margin: 8px 16px 4px 16px
+
+            &:hover
+                transform: scale(1.1)
+                opacity: 100%
+        h1
+            padding: 80px
+            text-align: center
+
+        h4
+            padding-bottom: 16px
+
+        p
+            padding-bottom: 40px
+
+@media screen and (max-width: 880px)
+    #imprint
+        .imprint-content
+            width: 90vw
+            margin: 89px auto 0 auto
+            .navigate-back
+                left: 24px
+                top: 105px
+                border-radius: 4px
+                opacity: 100%
+                svg
+                    margin: 8px 16px 4px 16px
+                    width: 16px
+                    height: auto

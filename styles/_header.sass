@@ -1,0 +1,183 @@
+.header-bar
+    background: $Snow
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08)
+    height: 96px
+    width: 100%
+    position: fixed
+    top: 0
+    z-index: 100
+
+    .header-content
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin: 0 auto
+        width: 100%
+
+        .LogoBig
+            width: 192px
+            margin: 20px 0 0 80px
+            svg
+                &:hover
+                    transform: scale(1.06)
+                    transition: 300ms
+
+        .LogoSmall
+            display: none
+
+        .pagetitle
+            justify-content: center
+            align-items: center
+            color: #A6A5AD
+            display: none
+
+        .menu
+            justify-content: flex-end
+            align-items: center
+            display: none
+
+        .nav-bar
+            margin: 24px 80px 0 0
+            display: flex
+            a
+                margin-left: 40px
+                text-decoration: none
+                text-align: center
+                color: $DeepPurple
+                font-size: 16px
+                font-weight: 500
+                &:hover
+                    color: $Flieder
+                    transition: 300ms
+            .contact
+                display: none
+
+            .current
+                font-weight: 700
+                &::after
+                    content: ""
+                    height: 6px
+                    width: 6px
+                    margin: auto
+                    display: block
+                    position: relative
+                    background: $DeepPurple
+                    border-radius: 8px
+                    bottom: -4px
+                    opacity: 80%
+
+        .menu-btn
+            display: none
+
+@media screen and (max-width: 880px)
+    .header-bar
+        height: 89px
+        display: flex
+        align-items: center
+        .header-content
+            padding: 0 24px
+            .LogoBig
+                display: none
+            .LogoSmall
+                display: flex
+                justify-content: flex-start
+                align-items: center
+            .pagetitle
+                display: flex
+                justify-content: center
+                align-items: center
+                color: #A6A5AD
+                font-weight: 700
+            .menu
+                display: flex
+                justify-content: flex-end
+                align-items: center
+                margin-right: 24px
+            
+
+            .nav-bar
+                position: absolute
+                width: 100%
+                height: calc(100vh - 89px)
+                background: $Snow
+                top: 89px
+                right: 0
+                transform: translateX(100%)
+                transition: transform ease 300ms
+                display: block
+                margin: 0
+                &.open
+                    transform: translateX(0) 
+
+                a
+                    display: block
+                    text-align: right 
+                    margin: 40px
+                    padding-bottom: 16px
+                    padding-top: 16px
+                    text-transform: lowercase
+                    border-bottom: 2px solid rgba(161,153,255,0.2)
+                    &:hover
+                        transform: none
+                        color: $DeepPurple
+
+                .contact
+                    display: block
+                    color: $Purple
+                    font-weight: 700
+
+                .current
+                    font-weight: 700
+                    &::after
+                        content: ""
+                        height: 6px
+                        width: 6px
+                        margin: 0 24px
+                        position: relative
+                        background: $DeepPurple
+                        border-radius: 8px
+                        bottom: 16px
+
+            .menu-btn
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 40px
+                height: 40px
+                cursor: pointer
+                transition: all .5s ease-in-out
+                .menu-btn_burger
+                    width: 20px
+                    height: 2px
+                    border-radius: 2px
+                    background: $DeepPurple
+                    transition: all .5s ease-in-out
+                    &::before
+                        transform: translateY(-6px)
+                        content: ''
+                        position: absolute
+                        width: 20px
+                        height: 2px
+                        border-radius: 2px
+                        background: $DeepPurple
+                        transition: all .5s ease-in-out
+                    &::after
+                        transform: translateY(6px)
+                        content: ''
+                        position: absolute
+                        width: 20px
+                        height: 2px
+                        border-radius: 2px
+                        background: $DeepPurple
+                        transition: all .5s ease-in-out
+
+            .menu-btn
+                &.open
+                    .menu-btn_burger
+                        transform: translateX(-50px)
+                        background: transparent
+                        &::before
+                            transform: rotate(45deg) translate(35px, -35px)
+                        &::after
+                            transform: rotate(-45deg) translate(35px, 35px)
+                        

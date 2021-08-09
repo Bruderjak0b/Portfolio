@@ -1,0 +1,170 @@
+#projects
+    .quote-wrapper
+        height: 64vh
+        background: linear-gradient(180deg, #A199FF 0%, rgba(161, 153, 255, 0) 100%)
+        margin-top: 96px
+        padding: 80px
+        position: relative
+        display: flex
+        justify-content: center
+        .quote-wrapper-content
+            top: 45%
+            transform: translateY(-50%)
+            position: absolute
+            .quotes
+                display: flex
+                justify-content: center
+                align-items: center
+            .quote
+                margin: 40px auto
+                font-size: 40px
+                color: $DeepPurple
+                font-style: italic
+                font-weight: 300
+                text-align: center
+            .autor
+                width: 100%
+                font-size: 16px
+                font-weight: 600
+                text-align: center
+                color: $DeepPurple
+                letter-spacing: 1px
+    .heading-underlined3
+        margin: 80px 0
+        text-align: center
+        font-size: 42px
+        font-weight: 400
+        &::after
+            content: ""
+            height: 20px
+            width: 255px
+            margin: auto
+            display: block
+            position: relative
+            background: #E8E5FF
+            border-radius: 8px
+            bottom: 28px
+            z-index: -1
+
+    .references-wrapper
+        width: 100%
+        padding: 0 80px
+        margin: 0 auto
+        max-width: 1440px
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+
+        .project-card
+            width: 23%
+            min-width: 256px
+            max-width: 302px
+            margin: 8px
+            height: 180px
+            transition: transform ease 0.2s
+            border-radius: 8px
+            overflow: hidden
+
+            a
+                text-decoration: none
+
+                .card-content
+                    position: relative
+                    width: 100%
+                    height: 100%
+                    display: flex
+                    justify-content: space-between
+                    background: linear-gradient(180deg, rgba(161, 153, 255, 0.2) 40%, #A199FF 100%)
+                    // background: rgba(161, 153, 255, 0.2)
+
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                        object-position: center center
+                        z-index: -1
+
+                    .hover-content
+                        position: absolute
+                        transition: transform ease 200ms
+                        left: 16px
+                        top: 76%
+                        .project-name
+                            color: $Snow
+                            font-weight: 700
+                        .project-describtion
+                            left: 16px
+                            bottom: 0
+                            width: 90%
+                            color: $Snow
+                            font-size: 16px
+                            opacity: 0
+                
+            &:hover
+                transform: scale(1.1)
+                box-shadow: 0 4px 4px rgba(230, 228, 234, 1)
+                .card-content
+                    background: linear-gradient(180deg, rgba(161, 153, 255, 1) , #A199FF 100%)
+                    .hover-content
+                        transform: translateY(-80%)
+                        .project-name
+                            font-weight: 700
+                            color: $Snow
+                        .project-describtion
+                            opacity: 100%
+
+    .button-projects
+        display: flex
+        justify-content: center
+        margin: 80px
+
+
+@media screen and (max-width: 880px)
+    #projects
+        .quote-wrapper
+            height: 56vh
+            margin-top: 89px
+            padding: 24px
+            .quote-wrapper-content
+                top: 50%
+                width: 80vw
+                .quotes
+                .quote
+                    margin: 24px 0
+                    font-size: 20px
+                    color: #706F7C
+                    font-style: italic
+                    font-weight: 400
+                    text-align: center
+                .autor
+                    width: 100%
+                    font-size: 12px
+                    font-weight: 300
+                    color: $Grey
+        .heading-underlined3
+            margin: 0
+            font-size: 25px
+            &::after
+                width: 154px
+                border-radius: 4px
+                bottom: 18px
+
+        .references-wrapper
+            width: 100%
+            padding: 0 24px
+            display: flex
+            justify-content: center
+            flex-wrap: wrap
+
+            .project-card
+                width: 100%
+                height: 180px
+                margin: 24px
+
+                a
+                    .card-content
+                        img
+                        .project-name
+                        .project-describtion
+
+        .button-projects

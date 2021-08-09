@@ -1,0 +1,305 @@
+#single-project
+    .navigate-back
+        position: fixed
+        background: $Snow
+        left: 80px
+        top: 162px
+        border-radius: 4px
+        display: flex
+        justify-content: center
+        align-content: center
+        filter: drop-shadow(0px 4px 8px rgba(161, 153, 255, 0.2))
+        z-index: 100
+        opacity: 60%
+        svg
+            margin: 8px 16px 4px 16px
+        &:hover
+            transform: scale(1.1)
+            opacity: 100%
+
+    .single-project-head-wrapper
+        height: 64vh
+        width: 100%
+        margin-top: 96px
+        position: relative
+        background: $FliederBright
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center center
+        .overlay
+            position: absolute
+            height: 100%
+            width: 100%
+            top: 0
+            left: 0
+            background: linear-gradient(180deg, rgba(161, 153, 255, 0) 36.39%, #A199FF 100%)
+            z-index: 1
+
+        .head-wrapper-content
+            position: absolute
+            bottom: 80px
+            left: 80px
+            color: $Snow
+            z-index: 2
+            h1
+                font-size: 42px
+                margin-bottom: 40px
+
+            p
+                width: 50%
+
+    .content-wrapper
+        .heading-style2
+            margin: 80px 0
+            font-size: 42px
+
+            &::after
+                display: block
+                content: ""
+                width: 80px
+                height: 8px
+                background: $Flieder
+                border-radius: 8px
+                margin-top: 16px
+                position: relative
+
+        .chapter-wrapper
+            display: flex
+            margin-bottom: 80px
+
+            .chapter-content
+                flex: 1
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+
+
+                .chapter-num
+                    font-size: 110px
+                    width: 100%
+                    display: flex
+                    justify-content: flex-end
+                    align-items: flex-start
+                    color: #E8E5FF
+                    line-height: 50%
+
+                .chapter-info
+                    width: 100%
+                    flex-direction: column
+                    justify-content: flex-end
+
+                    h4
+                        width: 100%
+                        font-size: 25px
+                        font-weight: 700
+
+                    p
+                        width: 80%
+                        margin-top: 24px
+
+            .chapter-img
+                flex: 2
+
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    object-position: right center
+                    box-shadow: 0 4px 4px rgba(230, 228, 234, 1)
+
+    iframe
+        width: 100%
+        align-items: center
+
+    .project-footer
+            width: 100%
+            background: $Snow
+            margin-top: 80px
+            padding: 80px
+
+            .project-content
+                display: flex
+                align-items: center
+                justify-content: space-between
+                width: 100%
+
+
+                .project-info
+                    display: flex
+                    justify-content: space-between
+                    width: 30%
+
+
+                .break
+                    background: $Flieder
+                    width: 4px
+                    height: 160px
+                    border-radius: 4px
+                    margin: 0 40px
+
+                .thankyou
+                    width: 60%
+                    text-align: center
+
+            .navigation
+                display: flex
+                justify-content: space-between
+                width: 100%
+                margin: 40px 0
+
+                a
+                    display: block
+                    text-decoration: none
+                    color: $Flieder
+                    &:hover
+                        opacity: 40%
+
+
+@media screen and (max-width: 1200px)
+    #single-project
+        .chapter-wrapper
+            .chapter-img
+                flex: 1
+
+
+@media screen and (max-width: 880px)
+    #single-project
+        .navigate-back
+            left: 24px
+            top: 105px
+            border-radius: 4px
+            opacity: 100%
+            svg
+                margin: 8px 16px 4px 16px
+                width: 24px
+                height: auto
+
+        .single-project-head-wrapper
+            height: 56vh
+            width: 100%
+            margin-top: 89px
+            position: relative
+
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                object-position: top center
+
+            .overlay
+                position: absolute
+                height: 100%
+                width: 100%
+                top: 0
+                left: 0
+                background: linear-gradient(180deg, rgba(161, 153, 255, 0) 0%, #A199FF 100%)
+                z-index: 1
+
+            .head-wrapper-content
+                bottom: 24px
+                left: 24px
+
+                h1
+                    font-size: 25px
+                    margin-bottom: 16px
+
+                p
+                    width: 80%
+        .content-wrapper
+            padding: 0 24px
+            .heading-style2
+                margin: 40px 0
+                font-size: 25px
+                &::after
+                    width: 40px
+                    height: 4px
+                    border-radius: 8px
+
+            .chapter-wrapper
+                display: flex
+                flex-direction: column
+                flex-wrap: wrap
+
+                .chapter-content
+                    flex: 1
+                    width: 100%
+
+                    .chapter-num
+                        display: none
+
+                    .chapter-info
+                        width: 100%
+                        flex-direction: column
+                        justify-content: flex-start
+
+                        h4
+                            width: 100%
+                            font-size: 16px
+                            font-weight: 700
+
+                        p
+                            width: 90%
+                            margin-top: 16px
+
+                .chapter-img
+                    flex: 2
+                    width: 100%
+                    margin-top: 40px
+
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                        object-position: right center
+
+        .project-footer
+                width: 100%
+                background: $Snow
+                margin-top: 24px
+                display: flex
+                align-content: center
+                flex-wrap: wrap
+                padding: 0 24px
+
+                .project-content
+                    display: block
+                    margin: 80px 24px 0 24px
+                    width: 100%
+
+                    .project-info
+                        display: flex
+                        flex-wrap: wrap
+                        justify-content: center
+                        width: 100%
+                        margin: 0 auto
+
+                        .info
+                            width: 100%
+                            padding: 16px
+                            text-align: center
+
+                    .break
+                        background: $Flieder
+                        width: 160px
+                        height: 4px
+                        border-radius: 4px
+                        margin: 80px auto
+
+                    .thankyou
+                        width: 100%
+                        text-align: center
+
+                        p
+                            margin-top: 16px
+
+                .navigation
+                    display: flex
+                    justify-content: space-between
+                    width: 100%
+                    margin: 80px auto
+                    a
+                        
+
